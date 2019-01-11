@@ -6,5 +6,12 @@ module.exports = (sequelize, DataTypes) => {
     content: DataTypes.TEXT
   }, {});
   
+  Note.associate = function(models){
+    Note.belongsToMany(models.Category,{
+      through: 'noteCategories',
+      as: 'category'
+    })
+  }
+
   return Note;
 };

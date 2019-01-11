@@ -1,5 +1,5 @@
 const User = require('../models').User;
-const SECRET = require('../config/config');
+
 
 
 module.exports = {
@@ -57,7 +57,6 @@ module.exports = {
           res.status(404).json({ error: 'User no found' });
         } else {
           if (user.password === password) {
-            console.log("dimeló",SECRET);
             res.status(200).json({ success: true });
           } else {
             res.status(401).json({ error: 'Incorrect password' });

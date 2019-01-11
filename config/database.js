@@ -1,7 +1,5 @@
-require('dotenv').config();
-// General configs and constants
+// DB configs and constants
 module.exports = {
-    SECRET: process.env.SECRET,
     database: process.env.DB_NAME,
     host: process.env.DB_HOST,
     username: process.env.DB_USER,
